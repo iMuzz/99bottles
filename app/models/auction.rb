@@ -12,6 +12,7 @@ class Auction < ActiveRecord::Base
   def create_end_time
     # self.end_time = DateTime.current.tomorrow.beginning_of_hour
     self.end_time = DateTime.new(2016, 2, 3) #Temporary hardcoded end time 
+    self.save
   end
 
   def higest_bid
